@@ -12,8 +12,6 @@ namespace QuizApp.Infrastructure.Data
         // TODO: add DbSets for Quizzes and Questions
         public DbSet<Quiz> Quizzes { get; set; }
         public DbSet<Question> Questions { get; set; }
-        //public DbSet<Topic> Topics { get; set; }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,8 +26,6 @@ namespace QuizApp.Infrastructure.Data
 
             builder.Entity<QuizQuestion>()
                 .HasKey(qt => new { qt.QuizId, qt.QuestionId });
-            //ConfigureQuestionTopicRelationships(builder);
-            //ConfigureQuizQuestionRelationships(builder);
 
             SetupSeedData(builder);
         }
@@ -37,14 +33,6 @@ namespace QuizApp.Infrastructure.Data
 
         private void SetupSeedData(ModelBuilder modelBuilder)
         {
-            // topics
-            //modelBuilder.Entity<Topic>().HasData(
-            //    new Topic
-            //    {
-            //        Id = 1,
-            //        Name = "Topic1"
-            //    });
-
             // quizzes
             modelBuilder.Entity<Quiz>().HasData(
                 new Quiz
