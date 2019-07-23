@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -15,8 +15,5 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QuizApp.Core\QuizApp.Core.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="quizapp.db" />
   </ItemGroup>
 </Project>
